@@ -287,6 +287,9 @@ public class TikTacToe implements ActionListener {
 
         button_panel.updateUI();
 
+        restartButton.setVisible(false);
+        restartButton.setEnabled(false);
+        
         firstTurn();
     }
 }
