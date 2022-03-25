@@ -1,4 +1,4 @@
-package dev.ivanshamliev.desktopFuelRest.gui.panel.gasStationPanel;
+package dev.ivanshamliev.desktopFuelRest.gui.gasStationWindow;
 
 import dev.ivanshamliev.desktopFuelRest.dtos.FuelRead;
 

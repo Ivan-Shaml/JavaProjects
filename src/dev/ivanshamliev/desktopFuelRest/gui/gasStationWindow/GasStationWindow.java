@@ -1,4 +1,4 @@
-package dev.ivanshamliev.desktopFuelRest.gui.panel.gasStationPanel;
+package dev.ivanshamliev.desktopFuelRest.gui.gasStationWindow;
 
 import dev.ivanshamliev.desktopFuelRest.dtos.City;
 import dev.ivanshamliev.desktopFuelRest.dtos.FuelRead;
@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.stream.Collectors;
 
-public class GasStationPanel extends JFrame {
+public class GasStationWindow extends JFrame {
 
     private Integer selectedCityId;
     private Integer selectedStationId;
@@ -52,7 +52,7 @@ public class GasStationPanel extends JFrame {
 
     private final FuelApiGetMethodsContract httpClient;
 
-    public GasStationPanel() {
+    public GasStationWindow() {
 
         this.httpClient = new RestHttpClient("http://localhost:8080/api/");
 
@@ -87,6 +87,7 @@ public class GasStationPanel extends JFrame {
         chooseCityBtn.addActionListener(new ChooseCity());
         clearSelectionBtn.addActionListener(new ResetForm());
 
+        this.setDefaultCloseOperation(EXIT_ON_CLOSE);
         this.setVisible(true);
         midPanel.setVisible(false);
         downPanel.setVisible(false);
